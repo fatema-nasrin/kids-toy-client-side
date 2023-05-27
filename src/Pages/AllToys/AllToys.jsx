@@ -54,7 +54,7 @@ const AllToys = () => {
               <td className="text-center">{product.quantity}</td>
 
               <th>
-                <Link to={`${product.id}`}>
+                <Link to={`${product._id}`}>
                 <button className="btn btn-outline btn-xs">
                   View Details
                 </button>
