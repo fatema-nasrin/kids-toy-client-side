@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
+import { useContext } from "react";
+import { CartContext } from "../../../Layout/Main";
 
 const Navbar = () => {
+  const [cart] = useContext(CartContext || [])
   return (
     <div className="navbar text-white bg-gradient-to-r from-[#514f4f] to-[rgba(21, 21, 21, 0)]">
       <div className="navbar-start">
@@ -86,8 +89,11 @@ const Navbar = () => {
        
       </div>
       <div className="navbar-end">
-               <div>
+               <div className="relative">
+                <Link to="/Cart">
                <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400"/>
+               <p className='absolute bottom-6 left-14 text-black'>{cart.length}</p>
+               </Link>
                </div>
               
         <img

@@ -1,14 +1,35 @@
-import { useEffect, useState } from "react";
+import toast from 'react-hot-toast'
+import { useContext } from "react";
 import { HiCurrencyBangladeshi } from "react-icons/hi";
+import { CartContext, ProductContext } from "../../Layout/Main";
+import { addToDb } from "../../utils/fakedb";
 
 const AllToys = () => {
-  const [products, setProducts] = useState([]);
+  const products = useContext(ProductContext || [])
+  const [cart, setCart] = useContext(CartContext || [])
 
-  useEffect(() => {
-    fetch("allToy.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  const handleAddToCart = product => {
+    let newCart = []
+    const exists = cart.find(
+      existingProduct => existingProduct.id === product.id
+    )
+    if (!exists) {
+      product.quantity = 1
+      newCart = [...cart, product]
+    } else {
+      const rest = cart.filter(
+        existingProduct => existingProduct.id !== product.id
+      )
+      exists.quantity = exists.quantity + 1
+      newCart = [...rest, exists]
+    }
+
+    setCart(newCart)
+    addToDb(product.id)
+    toast.success('Product Added! 🛒', { autoClose: 500 })
+  }
+
+  
   return (
 
     <div className="container mx-auto my-12 grid grid-cols-4 gap-4">
@@ -27,7 +48,7 @@ const AllToys = () => {
          <h2>Quantity: {product.quantity} </h2>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
-            <button className="btn btn-primary">Add To Cart</button>
+            <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Add To Cart</button>
           </div>
         </div>
       </div>
