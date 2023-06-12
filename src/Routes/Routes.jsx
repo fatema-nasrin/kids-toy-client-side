@@ -3,7 +3,6 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-import Blog from "../Pages/Blog/Blog";
 import Error from "../Pages/Error/Error";
 import AllToys from "../Pages/AllToys/AllToys";
 import SingleToy from "../Pages/AllToys/SingleToy";
@@ -27,18 +26,14 @@ const router = createBrowserRouter([
           element:<SignUp/>
         },
         {
-          path:'/blog',
-          element:<Blog/>
-        },
-        {
           path:'/allToys',
           element:<AllToys/>,
-          loader: () => fetch('http://localhost:5000/allToys')
+          loader: () => fetch('allToy.json')
         },
        {
         path:'allToys/:id',
         element:<SingleToy/>,
-        loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+        loader: ({params}) => fetch(`allToy.json/${params.id}`)
         
        }
     

@@ -34,7 +34,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero bg-base-200">
+    <div className="hero bg-base-200 relative">
       <div className="hero-content flex-col">
         <div className="card flex-shrink-0 w-full max-w-sm text-white shadow-2xl bg-base-100">
           <div className="card-body">

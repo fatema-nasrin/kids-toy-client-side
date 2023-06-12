@@ -4,32 +4,37 @@ const Footer = () => {
     <footer>
       <div className="footer p-10 bg-base-200 text-base-content">
         <div>
-          <img src="/public/logo.png" className="h-24 w-auto" alt="" />
+          <img src="/public/logo2.png" className="h-24 w-auto" alt="" />
           <p>
-            MUSIKIDDOS Industries Ltd.
+            KHELNAGHOR Industries Ltd.
             <br />
             Providing reliable tech since 1992
           </p>
         </div>
         <div>
-          <span className="footer-title">Services</span>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <span className="footer-title">Payment Methods</span>
+          <div>
+            <img src="/src/assets/Bkash-logo.png" className="h-20 w-auto" alt="" />
+            <img src="/src/assets/Nagad.png" className="h-20 w-24" alt="" />
+            <img src="/src/assets/rocket.png" className="h-12 w-auto" alt="" />
+          </div>
         </div>
         <div>
-          <span className="footer-title">Company</span>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Press kit</a>
+          <span className="footer-title">verified by</span>
+          <img src="/src/assets/adfix.png" className="h-12 w-auto" alt="" />
+          <img src="/src/assets/dazzler.jpg" className="h-12 w-auto" alt="" />
+          <img src="/src/assets/unilever.jpg" className="h-12 w-auto" alt="" />
         </div>
         <div>
-          <span className="footer-title">Legal</span>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <span className="footer-title">Sponsors</span>
+          <div className="grid grid-cols-2 items-center">
+          <img src="/public/sponsor1.png" alt="" />
+          <img src="/public/sponsor2.png" alt="" />
+          <img src="/public/sponsor3.png" alt="" />
+          <img src="/public/sponsor4.png" alt="" />
+          </div>
         </div>
+       
       </div>
 
       <div className="p-10 bg-base-200 text-base-content flex justify-center">

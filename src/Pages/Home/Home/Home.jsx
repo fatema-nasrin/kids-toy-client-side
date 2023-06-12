@@ -4,7 +4,6 @@ import BlogPosts from "../BlogPosts/BlogPosts";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import RelevantPicture from "../RelevantPicture/RelevantPicture";
 import Reviews from "../Reviews/Reviews";
-import ShopCategoryCard from "../ShopCategory/ShopCategoryCard";
 
 
 const Home = () => {
@@ -12,10 +11,9 @@ const Home = () => {
         <div>
             <Banner/>
             <RelevantPicture/>
-            <ShopCategoryCard/>
+            <BlogPosts/>
             <Reviews/>
             <AboutUs/>
-            <BlogPosts/>
             <NewsLetter/>
         </div>
     );

@@ -5,79 +5,69 @@ const RelevantPicture = () => {
     <div className="my-16 text-center text-black container mx-auto px-4 sm:px-6 lg:px-8">
       <h1 className="text-5xl">Some Of Our Collections!</h1>
       <p className=" text-xl mx-10 my-4">
-        Our extraordinary gallery is a treasure trove of vibrant and playful
-        musical instruments that will ignite your child's imagination and
-        creativity. Explore an enchanting assortment of colorful guitars,
-        whimsical xylophones, cheerful drums, and more. Each instrument is like
-        a magical companion, ready to bring joy and laughter through delightful
-        melodies. Let your little ones embark on a musical adventure,
-        discovering the rhythm and harmony that fills the air. With every
-        instrument they encounter, they'll unlock a world of musical
-        possibilities and unlock their inner superstar. Come and join the
-        musical fun in our captivating gallery, where the power of music and the
-        joy of play come together in perfect harmony!
+      At FunPlay Toys, we believe that playtime is essential for a child's growth and development. That's why we offer an extensive range of toys carefully selected to spark creativity, imagination, and learning. From classic favorites to the latest trends, our collection encompasses a diverse array of toys that cater to every interest and preference.
       </p>
       <Marquee>
         <div className="gap-10 flex">
           <div className="card rounded-xl w-96 bg-base-100 shadow-slate-400">
             <img
-              src="https://i.etsystatic.com/36331234/c/2000/2000/0/0/il/0f7452/4177424025/il_300x300.4177424025_47xu.jpg"
+              src="https://static-01.daraz.com.bd/p/0d23cbad4abc3b891ca29d1c412089c0.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/18840488/c/3000/3000/0/0/il/29f18a/3994474605/il_300x300.3994474605_24op.jpg"
+              src="https://static-01.daraz.com.bd/p/2bd261d220d8e265e16f10fb5b082a00.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96  bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/19202290/r/il/bcb54b/2012215768/il_300x300.2012215768_rlje.jpg"
+              src="https://static-01.daraz.com.bd/p/c77f6ac2d633352a3e8bef1c2c584a45.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/35875603/c/733/733/40/67/il/a712f5/3957759452/il_300x300.3957759452_dzzo.jpg"
+              src="https://static-01.daraz.com.bd/p/018101c3990fd9e3bd020adf60195fa5.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/18090643/r/il/91ba26/1690502491/il_300x300.1690502491_jea6.jpg"
+              src="https://static-01.daraz.com.bd/p/9e40596b5385a20e9c20b481eb5dd364.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/18856482/r/il/d41b07/3633028003/il_300x300.3633028003_kbkx.jpg"
+              src="https://static-01.daraz.com.bd/p/bb1a542fe5724549fc4f650e644d39a2.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/38140072/r/il/34bc62/4920129242/il_300x300.4920129242_2pri.jpg"
+              src="https://static-01.daraz.com.bd/p/f92d7f49dc3772c946f0ae9850ae7dec.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
           <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/30564155/r/il/0e444e/3431102435/il_300x300.3431102435_4m7b.jpg"
+              src="https://static-01.daraz.com.bd/p/42613cb980f89a0d90b18c98c5d3db36.jpg"
               alt=""
               className="rounded-xl"
             />
           </div>
-          <div className="card rounded-xl w-96 bg-base-100 shadow-xl">
+          <div className="card rounded-xl w-96 overflow-hidden bg-base-100 shadow-xl">
             <img
-              src="https://i.etsystatic.com/17970358/r/il/710a5b/3790511267/il_300x300.3790511267_eu63.jpg"
+              src="https://static-01.daraz.com.bd/p/3e8d20734f25d258100c2b2c3049410e.jpg"
               alt=""
               className="rounded-xl"
             />

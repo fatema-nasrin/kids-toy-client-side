@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { HiShoppingCart } from "react-icons/hi";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 text-white">
+    <div className="navbar text-white bg-gradient-to-r from-[#514f4f] to-[rgba(21, 21, 21, 0)]">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -37,35 +38,26 @@ const Navbar = () => {
               <a>All Toys</a>
               </Link>
               </li>
-              <li>
-                <a>My Toys</a>
-              </li>
-              <li>
-                <a>Add A Toy</a>
-              </li>
-              <li>
-                <Link to="/blog">
-                Blogs
-                </Link>
-              </li>
+
 
               <input
                 type="text"
                 placeholder="Search"
                 className="input input-bordered rounded h-10"
               />
+              <li >
+                <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400"/>
+              </li>
             </li>
           </ul>
         </div>
         <div className="flex items-center space-x-2">
           <img
-            src="/public/logo.png"
+            src="/src/assets/logo.png"
             alt="Website Logo"
-            className="w-auto lg:h-24"
+            className="w-auto lg:h-20 opacity-75"
           />
-          <span className="font-bold lg:text-3xl text-orange-500">
-            𝕄𝕦𝕤𝕚𝕂𝕚𝕕𝕕𝕠𝕤
-          </span>
+          
         </div>
       </div>
       <div className="navbar-center hidden lg:flex ml-52">
@@ -81,17 +73,9 @@ const Navbar = () => {
               <a>All Toys</a>
               </Link>
             </li>
-            <li>
-              <a>My Toys</a>
-            </li>
-            <li>
-              <a>Add A Toy</a>
-            </li>
-            <li>
-            <Link to="/blog">
-               <a>Blogs</a> 
-                </Link>
-            </li>
+            
+            
+           
           </li>
         </ul>
         <input
@@ -99,14 +83,19 @@ const Navbar = () => {
           placeholder="Search"
           className="input input-bordered rounded h-10"
         />
+       
       </div>
       <div className="navbar-end">
+               <div>
+               <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400"/>
+               </div>
+              
         <img
           src="profile.jpg"
           alt="User Profile Picture"
-          className="w-10 h-10 rounded-full"
+          className="w-10 h-10 rounded-full mx-4"
         />
-        <span>{}</span>
+    
       </div>
     </div>
   );
