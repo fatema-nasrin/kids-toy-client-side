@@ -1,5 +1,6 @@
 
 import { HiCurrencyBangladeshi } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const BlogPosts = () => {
   const blogPosts = [
@@ -86,7 +87,7 @@ const BlogPosts = () => {
   ];
 
   return (
-    <section className="container py-10 grid lg:grid-flow-col-dense mx-auto my-16" >
+    <section className="container mx-auto" >
       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {blogPosts.map((post) => (
@@ -113,9 +114,11 @@ const BlogPosts = () => {
             </a>
           ))}
         </div>
-  
-
-     
+  <div className="text-center">
+    <Link to="/allToys">
+            <button className="btn btn-secondary my-4">See More</button>
+            </Link>
+            </div>
     </section>
   );
 };

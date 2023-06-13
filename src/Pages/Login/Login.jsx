@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext)
   const [error, setError] = useState("");
 
   const handleLogin = (event) => {

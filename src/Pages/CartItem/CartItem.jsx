@@ -1,7 +1,7 @@
 
 
 const CartItem = ({ product, handleRemoveItem }) => {
-  const { id, name, price, quantity, picture } = product
+  const { id, toyName, price, quantity, picture } = product
   return (
     <li className='flex flex-col py-6 sm:flex-row sm:justify-between'>
       <div className='flex w-full space-x-2 sm:space-x-4'>
@@ -14,7 +14,7 @@ const CartItem = ({ product, handleRemoveItem }) => {
           <div className='flex justify-between w-full pb-2 space-x-2'>
             <div className='space-y-1'>
               <h3 className='text-lg font-semibold leading-snug sm:pr-8'>
-                {name}
+                {toyName}
               </h3>
               <p className='text-sm text-gray-400'>Quantity: {quantity}</p>
             </div>

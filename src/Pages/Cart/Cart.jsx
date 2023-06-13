@@ -79,7 +79,7 @@ const Cart = () => {
             </>
           ) : (
             <>
-              <Link to='/shop'>
+              <Link to='/allToys'>
                 <button
                   type='button'
                   onClick={deleteCartHandler}
@@ -91,7 +91,7 @@ const Cart = () => {
             </>
           )}
 
-          <button onClick={orderHandler} type='button' className='btn-primary'>
+          <button onClick={orderHandler} type='button' className='btn btn-primary'>
             Place Order
           </button>
         </div>

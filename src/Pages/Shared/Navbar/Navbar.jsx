@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "../../../Layout/Main";
 
 const Navbar = () => {
-  const [cart] = useContext(CartContext || [])
+  const [cart] = useContext(CartContext || []);
   return (
     <div className="navbar text-white bg-gradient-to-r from-[#514f4f] to-[rgba(21, 21, 21, 0)]">
       <div className="navbar-start">
@@ -32,24 +32,23 @@ const Navbar = () => {
             <li tabIndex={0}>
               <li>
                 <Link to="/">
-                <a>Home</a>
+                  <a>Home</a>
                 </Link>
               </li>
 
               <li>
-              <Link to="/allToys">
-              <a>All Toys</a>
-              </Link>
+                <Link to="/allToys">
+                  <a>All Toys</a>
+                </Link>
               </li>
-
 
               <input
                 type="text"
                 placeholder="Search"
                 className="input input-bordered rounded h-10"
               />
-              <li >
-                <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400"/>
+              <li>
+                <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400" />
               </li>
             </li>
           </ul>
@@ -60,25 +59,21 @@ const Navbar = () => {
             alt="Website Logo"
             className="w-auto lg:h-20 opacity-75"
           />
-          
         </div>
       </div>
       <div className="navbar-center hidden lg:flex ml-52">
         <ul className="menu menu-horizontal px-1">
           <li tabIndex={0}>
             <li>
-            <Link to="/">
+              <Link to="/">
                 <a>Home</a>
-                </Link>
+              </Link>
             </li>
             <li>
               <Link to="/allToys">
-              <a>All Toys</a>
+                <a>All Toys</a>
               </Link>
             </li>
-            
-            
-           
           </li>
         </ul>
         <input
@@ -86,22 +81,22 @@ const Navbar = () => {
           placeholder="Search"
           className="input input-bordered rounded h-10"
         />
-       
       </div>
       <div className="navbar-end">
-               <div className="relative">
-                <Link to="/Cart">
-               <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400"/>
-               <p className='absolute bottom-6 left-14 text-black'>{cart.length}</p>
-               </Link>
-               </div>
-              
+        <div className="relative">
+          <Link to="/Cart">
+            <HiShoppingCart className="h-12 w-10 mx-4 text-orange-400" />
+            <p className="absolute bottom-6 left-14 text-black">
+              {cart.length}
+            </p>
+          </Link>
+        </div>
+
         <img
           src="profile.jpg"
           alt="User Profile Picture"
           className="w-10 h-10 rounded-full mx-4"
         />
-    
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import { getStoredCart } from "../utils/fakedb"
+import { getStoredCart } from "../utils/fakeDB"
+
 
 
 export const productsAndCartData = async () => {

@@ -5,7 +5,6 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Error from "../Pages/Error/Error";
 import AllToys from "../Pages/AllToys/AllToys";
-import SingleToy from "../Pages/AllToys/SingleToy";
 import { productsAndCartData } from "../loaders/getCart&ProductsData";
 import Cart from "../Pages/Cart/Cart";
 
@@ -35,11 +34,6 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys />,
-      },
-      {
-        path: "allToys/:id",
-        element: <SingleToy />,
-        loader: ({ params }) => fetch(`allToy.json/${params.id}`),
       },
     ],
   },
