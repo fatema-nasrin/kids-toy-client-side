@@ -14,6 +14,7 @@ const NewsLetter = () => {
       progress: undefined,
       theme: "light",
     });
+    
   };
 
   return (
@@ -31,6 +32,7 @@ const NewsLetter = () => {
               placeholder="Your email address"
               className="w-full max-w-sm rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
+            
             />
 
             <button
@@ -52,6 +54,7 @@ const NewsLetter = () => {
               pauseOnHover
               theme="light"
             />
+            
           </form>
         </div>
       </div>

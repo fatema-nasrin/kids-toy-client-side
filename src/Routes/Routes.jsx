@@ -7,6 +7,7 @@ import Error from "../Pages/Error/Error";
 import AllToys from "../Pages/AllToys/AllToys";
 import { productsAndCartData } from "../loaders/getCart&ProductsData";
 import Cart from "../Pages/Cart/Cart";
+import PrivateRoute from "../route/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -29,11 +30,12 @@ const router = createBrowserRouter([
       },
       { 
         path: "/cart", 
-        element: <Cart /> 
+        element: <PrivateRoute><Cart /> </PrivateRoute>
       },
       {
         path: "/allToys",
-        element: <AllToys />,
+        element:<PrivateRoute> <AllToys /> </PrivateRoute> ,
+        
       },
     ],
   },

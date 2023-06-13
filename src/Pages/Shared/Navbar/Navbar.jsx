@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
 import { useContext } from "react";
 import { CartContext } from "../../../Layout/Main";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext)
   const [cart] = useContext(CartContext || []);
   return (
     <div className="navbar text-white bg-gradient-to-r from-[#514f4f] to-[rgba(21, 21, 21, 0)]">
@@ -92,11 +94,11 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <img
-          src="profile.jpg"
+       { user && <img
+          src={user.photoURL}
           alt="User Profile Picture"
           className="w-10 h-10 rounded-full mx-4"
-        />
+        />}
       </div>
     </div>
   );

@@ -1,39 +1,30 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const { createUser }= useContext(AuthContext)
+  
 
-  const handleSignUp = (event) => {
-    event.preventDefault();
-    setSuccess("");
-    setError("");
-    const form = event.target;
-    const name = form.name.value;
-    const photo = form.photo.value;
-    const email = form.email.value;
-    const password = form.password.value;
-    console.log(name, email, password, photo);
-    if (!/(?=.*[A-Z])/.test(password)) {
-      setError("please add at least one upper case");
-      return;
-    } else if (!/ (?=.*[0-9]) /.test(password)) {
-      setError("please add at least two number");
-    } else if (password.length < 6) {
-      setError("please add at least 6number of characters");
-      return;
+    const handleSignUp = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photo = form.photo.value;
+        console.log(name,email,password,photo);
+
+        createUser(email, password,photo)
+        .then(result => {
+          const loggedUser =result.user;
+          console.log(loggedUser);
+          form.reset();
+        })
+        .catch(error => {
+          console.log(error);
+        })
     }
-
-    createUser(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-      })
-      .then((error) => console.log(error));
-  };
   return (
     <div className="hero bg-base-200">
       <div className="hero-content flex-col text-white">
@@ -106,8 +97,7 @@ const SignUp = () => {
                   value="Sign up"
                 />
               </div>
-              <p className="text-danger">{error} </p>
-              <p className="text-success">{success} </p>
+             
             </form>
           </div>
         </div>

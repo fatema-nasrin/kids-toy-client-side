@@ -1,37 +1,25 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext)
-  const [error, setError] = useState("");
+  const {signIn,handleGoogleSignIn} = useContext(AuthContext);
+  
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const email = form.email.value;
-    const password = form.password.value;
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
 
-    setError("");
-
-    if (!/(?=.*[A-Z])/.test(password)) {
-      setError("please add uppercase");
-      return;
-    } else if (!/ (?=.*[0-9]) /.test(password)) {
-      setError("please add at least two number");
-    } else if (password.length < 6) {
-      setError("please enter 6 ch-rt");
-      return;
-    }
-
-    signIn(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-      })
-      .catch((error) => console.log(error));
-  };
+        signIn(email , password)
+        .then(result => {
+          const loggedUser = result.user;
+          console.log(loggedUser);
+          form.reset();
+        })
+      }
 
   return (
     <div className="hero bg-base-200 relative">
@@ -85,7 +73,7 @@ const Login = () => {
               <div className="form-control">
                 <a href="#">
                   <Link className="label-text-alt link link-hover ml-1 mr-24 text-base">
-                    <button className="btn btn-outline btn-info">
+                    <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info">
                       {" "}
                       <FaGoogle className="mr-2" /> continue with google
                     </button>{" "}
@@ -100,7 +88,7 @@ const Login = () => {
                   value="Log in"
                 />
               </div>
-              <p className="text-danger">{error} </p>
+      
             </form>
           </div>
         </div>
